@@ -17,19 +17,19 @@ struct Resultado: Codable {
 
 struct Producto: Codable, Identifiable {
     var id = UUID()
-    let categoria: String
     let nombre: String
-    let urlImagenes: [String]
-    let precioRegular: Int
-    let precioFinal: Int
+    let codigoCategoria: String
     let descuento: Bool
+    let precioRegular: Int
+    let urlImagenes: [String]
+    let precioFinal: Double
     
     enum CodingKeys: String, CodingKey {
-        case categoria = "codigoCategoria"
         case nombre
-        case urlImagenes
-        case precioRegular
-        case precioFinal
+        case codigoCategoria
         case descuento
+        case precioRegular
+        case urlImagenes
+        case precioFinal
     }
 }

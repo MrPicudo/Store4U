@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var response: ResponseModel?
+    
     var body: some View {
         VStack {
-            Text("Hello, world!")
+            if let response = response {
+                Text(response.resultado.productos[0].nombre)
+            }
         }
-        .padding()
+        .task {
+            do {
+                response = try await loadData()
+            } catch APIError.missingEndpoint {
+                print("No se pudo obtener el endpoint")
+            } catch APIError.invalidURL {
+                print("URL inválido")
+            } catch APIError.invalidResponse {
+                print("Respuesta del servidor fallida")
+            } catch APIError.invalidData {
+                print("No se pudo obtener la información")
+            } catch {
+                print("Error desconocido")
+            }
+        }
     }
 }
 

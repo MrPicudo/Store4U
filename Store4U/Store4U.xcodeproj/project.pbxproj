@@ -12,6 +12,8 @@
 		B33479242C8FC11D00F53B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33479232C8FC11D00F53B47 /* Assets.xcassets */; };
 		B33479272C8FC11D00F53B47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33479262C8FC11D00F53B47 /* Preview Assets.xcassets */; };
 		B334796A2C90C3B600F53B47 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33479692C90C3B600F53B47 /* ResponseModel.swift */; };
+		B334796C2C90C9C500F53B47 /* ResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334796B2C90C9C500F53B47 /* ResponseViewModel.swift */; };
+		B33479712C90FCBF00F53B47 /* infoAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = B33479702C90FCBF00F53B47 /* infoAPI.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		B33479232C8FC11D00F53B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33479262C8FC11D00F53B47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B33479692C90C3B600F53B47 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		B334796B2C90C9C500F53B47 /* ResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewModel.swift; sourceTree = "<group>"; };
+		B33479702C90FCBF00F53B47 /* infoAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = infoAPI.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 				B334791F2C8FC11B00F53B47 /* Store4UApp.swift */,
 				B33479212C8FC11B00F53B47 /* ContentView.swift */,
 				B33479692C90C3B600F53B47 /* ResponseModel.swift */,
+				B334796B2C90C9C500F53B47 /* ResponseViewModel.swift */,
 				B33479232C8FC11D00F53B47 /* Assets.xcassets */,
 				B33479252C8FC11D00F53B47 /* Preview Content */,
+				B33479702C90FCBF00F53B47 /* infoAPI.plist */,
 			);
 			path = Store4U;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 			files = (
 				B33479272C8FC11D00F53B47 /* Preview Assets.xcassets in Resources */,
 				B33479242C8FC11D00F53B47 /* Assets.xcassets in Resources */,
+				B33479712C90FCBF00F53B47 /* infoAPI.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33479222C8FC11B00F53B47 /* ContentView.swift in Sources */,
+				B334796C2C90C9C500F53B47 /* ResponseViewModel.swift in Sources */,
 				B334796A2C90C3B600F53B47 /* ResponseModel.swift in Sources */,
 				B33479202C8FC11B00F53B47 /* Store4UApp.swift in Sources */,
 			);
@@ -279,6 +287,7 @@
 				DEVELOPMENT_TEAM = 84TTD6VG5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Store4U/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -308,6 +317,7 @@
 				DEVELOPMENT_TEAM = 84TTD6VG5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Store4U/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
