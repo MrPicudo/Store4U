@@ -23,6 +23,7 @@ func loadData() async throws -> ResponseModel {
     // Obtenemos los datos en formato JSON a partir de la URL
     let (data, response) = try await URLSession.shared.data(from: url)
     
+    // Manejamos los posibles errores de respuesta del servidor.
     guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
         throw APIError.invalidResponse
     }
