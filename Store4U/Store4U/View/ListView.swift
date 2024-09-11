@@ -1,20 +1,23 @@
 //
-//  ContentView.swift
+//  ListView.swift
 //  Store4U
 //
-//  Created by Jose Miguel Torres Chavez Nava on 09/09/24.
+//  Created by Jose Miguel Torres Chavez Nava on 10/09/24.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct ListView: View {
     
-    @State private var response: ResponseModel?
+    @Binding var response: ResponseModel?
     
     var body: some View {
         VStack {
             if let response = response {
-                Text(response.resultado.productos[0].nombre)
+                List(response.resultado.productos) { producto in
+                    Text(producto.nombre)
+                    Text("\(producto.precioRegular)")
+                }
             }
         }
         .task {
@@ -35,6 +38,3 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
