@@ -11,7 +11,7 @@ struct ListView: View {
     
     @Binding var response: ResponseModel?
     @Binding var selectedProduct: Producto?
-    @Environment(\.presentationMode) var presentationMode // Para controlar el regreso a la vista principal
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView {
@@ -25,10 +25,12 @@ struct ListView: View {
                         HStack {
                             // Imagen asíncrona cargada del link obtenido de la API
                             AsyncImageView(width: 100, height: 100, url: producto.urlImagenes[0])
+                            Spacer()
                             // Nombre del producto
                             VStack {
                                 Spacer()
                                 Text(producto.nombre)
+                                    .multilineTextAlignment(.trailing)
                                     .padding(.bottom)
                                 if producto.descuento {
                                     DiscountView()

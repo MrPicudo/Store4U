@@ -18,30 +18,31 @@ struct ProductView: View {
                 if response == nil {
                     Spacer()
                 } else {
-                    // Detalle de producto seleccionado.
-                    if let producto = selectedProduct {
-                        // Nombre del producto
-                        Text(producto.nombre)
-                            .font(.title)
-                            .padding()
-                        // Carrusel de imágenes asíncronas del producto.
-                        TabView {
-                            ForEach(producto.urlImagenes, id: \.self) { url in
-                                AsyncImageView(width: 200, height: 200, url: url)
+                    ScrollView {
+                        // Detalle de producto seleccionado.
+                        if let producto = selectedProduct {
+                            // Nombre del producto
+                            Text(producto.nombre)
+                                .font(.title)
+                                .padding()
+                            // Carrusel de imágenes asíncronas del producto.
+                            TabView {
+                                ForEach(producto.urlImagenes, id: \.self) { url in
+                                    AsyncImageView(width: 200, height: 200, url: url)
+                                }
                             }
+                            .tabViewStyle(PageTabViewStyle())
+                            .frame(height: 300)
+                            // Letrero de descuento
+                            if producto.descuento {
+                                DiscountView()
+                            }
+                            // Precio regular vs precio final
+                            PriceView(precioRegular: producto.precioRegular, descuento: producto.descuento, precioFinal: producto.precioFinal)
+                            // Categoria
+                            CategoryView(codigoCategoria: producto.codigoCategoria)
                         }
-                        .tabViewStyle(PageTabViewStyle())
-                        .frame(height: 300)
-                        // Letrero de descuento
-                        if producto.descuento {
-                            DiscountView()
-                        }
-                        // Precio regular vs precio final
-                        PriceView(precioRegular: producto.precioRegular, descuento: producto.descuento, precioFinal: producto.precioFinal)
-                        // Categoria
-                        CategoryView(codigoCategoria: producto.codigoCategoria)
                     }
-                    Spacer()
                 }
                 NavigationLink(destination: ListView(response: $response, selectedProduct: $selectedProduct)) {
                     Text("Mostrar listado")
