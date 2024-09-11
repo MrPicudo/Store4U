@@ -28,7 +28,7 @@ struct ProductView: View {
                             // Carrusel de imágenes asíncronas del producto.
                             TabView {
                                 ForEach(producto.urlImagenes, id: \.self) { url in
-                                    AsyncImageView(width: 200, height: 200, url: url)
+                                    AsyncImageView(width: 250, height: 250, url: url)
                                 }
                             }
                             .tabViewStyle(PageTabViewStyle())

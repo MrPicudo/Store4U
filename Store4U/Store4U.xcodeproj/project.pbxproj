@@ -19,6 +19,7 @@
 		B334797A2C91871200F53B47 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33479792C91871200F53B47 /* DiscountView.swift */; };
 		B334797C2C9188E800F53B47 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334797B2C9188E800F53B47 /* CategoryView.swift */; };
 		B334797E2C918EEB00F53B47 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334797D2C918EEB00F53B47 /* PriceView.swift */; };
+		B33479802C91E00400F53B47 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B334797F2C91E00400F53B47 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B33479792C91871200F53B47 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
 		B334797B2C9188E800F53B47 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B334797D2C918EEB00F53B47 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		B334797F2C91E00400F53B47 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				B33479232C8FC11D00F53B47 /* Assets.xcassets */,
 				B33479252C8FC11D00F53B47 /* Preview Content */,
 				B33479702C90FCBF00F53B47 /* infoAPI.plist */,
+				B334797F2C91E00400F53B47 /* Localizable.xcstrings */,
 			);
 			path = Store4U;
 			sourceTree = "<group>";
@@ -152,11 +155,12 @@
 			};
 			buildConfigurationList = B33479172C8FC11B00F53B47 /* Build configuration list for PBXProject "Store4U" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "es-419";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = B33479132C8FC11B00F53B47;
 			productRefGroup = B334791D2C8FC11B00F53B47 /* Products */;
@@ -175,6 +179,7 @@
 			files = (
 				B33479272C8FC11D00F53B47 /* Preview Assets.xcassets in Resources */,
 				B33479242C8FC11D00F53B47 /* Assets.xcassets in Resources */,
+				B33479802C91E00400F53B47 /* Localizable.xcstrings in Resources */,
 				B33479712C90FCBF00F53B47 /* infoAPI.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

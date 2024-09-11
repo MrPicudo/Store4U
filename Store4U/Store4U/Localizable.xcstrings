@@ -1,0 +1,56 @@
+{
+  "sourceLanguage" : "es-419",
+  "strings" : {
+    "¡En descuento!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On Sale Now!"
+          }
+        }
+      }
+    },
+    "$%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Categoría: " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category:"
+          }
+        }
+      }
+    },
+    "Mostrar listado" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show listing"
+          }
+        }
+      }
+    },
+    "No se pudo cargar la imagen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to load image"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
