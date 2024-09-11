@@ -14,19 +14,31 @@ struct ListView: View {
     @Environment(\.presentationMode) var presentationMode // Para controlar el regreso a la vista principal
     
     var body: some View {
-        VStack {
+        ScrollView {
             if let response = response {
                 ForEach(response.resultado.productos) { producto in
                     Button {
+                        // Actualizamos el valor del producto seleccionado y salimos de esta vista.
                         selectedProduct = producto
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         HStack {
-                            Text(producto.nombre)
-                            Spacer()
-                            Text("\(producto.precioRegular)")
+                            // Imagen asíncrona cargada del link obtenido de la API
+                            AsyncImageView(width: 100, height: 100, url: producto.urlImagenes[0])
+                            // Nombre del producto
+                            VStack {
+                                Spacer()
+                                Text(producto.nombre)
+                                    .padding(.bottom)
+                                if producto.descuento {
+                                    DiscountView()
+                                }
+                                Spacer()
+                            }
                         }
+                        .padding()
                     }
+                    Divider()
                 }
             }
         }

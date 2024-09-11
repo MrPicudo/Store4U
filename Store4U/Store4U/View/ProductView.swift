@@ -23,61 +23,23 @@ struct ProductView: View {
                         // Nombre del producto
                         Text(producto.nombre)
                             .font(.title)
-                            .padding(.vertical)
-                        // Imagen asíncrona cargada del link obtenido de la API
-                        AsyncImage(url: URL(string: producto.urlImagenes[0])) { phase in
-                            if let image = phase.image {
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            } else if phase.error != nil {
-                                Text("No se pudo cargar la imagen")
-                            } else {
-                                ProgressView()
+                            .padding()
+                        // Carrusel de imágenes asíncronas del producto.
+                        TabView {
+                            ForEach(producto.urlImagenes, id: \.self) { url in
+                                AsyncImageView(width: 200, height: 200, url: url)
                             }
                         }
-                        .frame(width: 200, height: 200)
+                        .tabViewStyle(PageTabViewStyle())
+                        .frame(height: 300)
                         // Letrero de descuento
                         if producto.descuento {
-                            HStack {
-                                Spacer()
-                                Image(systemName: "banknote")
-                                    .foregroundStyle(.green)
-                                Text("¡En descuento!")
-                                    .font(.footnote)
-                                    .fontWeight(.bold)
-                            }
-                            .padding(.vertical, -20)
-                            .padding(.horizontal)
+                            DiscountView()
                         }
                         // Precio regular vs precio final
-                        HStack {
-                            Text("$\(producto.precioRegular)")
-                                .font(.title)
-                            if producto.descuento {
-                                Image(systemName: "arrow.forward")
-                                    .font(.title)
-                                    .bold()
-                                Text("$" + String(format: "%.0f", producto.precioFinal))
-                                    .font(.title)
-                            }
-                            Spacer()
-                        }
-                        .padding(.horizontal)
+                        PriceView(precioRegular: producto.precioRegular, descuento: producto.descuento, precioFinal: producto.precioFinal)
                         // Categoria
-                        HStack {
-                            Text("Categoría: ")
-                                .font(.title3)
-                            Image(systemName: "smartphone")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.red)
-                            Text(producto.codigoCategoria)
-                                .font(.title3)
-                            Spacer()
-                        }
-                        .padding(.horizontal)
+                        CategoryView(codigoCategoria: producto.codigoCategoria)
                     }
                     Spacer()
                 }

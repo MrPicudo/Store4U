@@ -15,6 +15,10 @@
 		B334796C2C90C9C500F53B47 /* ResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334796B2C90C9C500F53B47 /* ResponseViewModel.swift */; };
 		B33479712C90FCBF00F53B47 /* infoAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = B33479702C90FCBF00F53B47 /* infoAPI.plist */; };
 		B33479762C90FFBC00F53B47 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33479752C90FFBC00F53B47 /* ListView.swift */; };
+		B33479782C91851E00F53B47 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33479772C91851E00F53B47 /* AsyncImageView.swift */; };
+		B334797A2C91871200F53B47 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33479792C91871200F53B47 /* DiscountView.swift */; };
+		B334797C2C9188E800F53B47 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334797B2C9188E800F53B47 /* CategoryView.swift */; };
+		B334797E2C918EEB00F53B47 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334797D2C918EEB00F53B47 /* PriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		B334796B2C90C9C500F53B47 /* ResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewModel.swift; sourceTree = "<group>"; };
 		B33479702C90FCBF00F53B47 /* infoAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = infoAPI.plist; sourceTree = "<group>"; };
 		B33479752C90FFBC00F53B47 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B33479772C91851E00F53B47 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		B33479792C91871200F53B47 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
+		B334797B2C9188E800F53B47 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		B334797D2C918EEB00F53B47 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,10 @@
 			children = (
 				B33479212C8FC11B00F53B47 /* ProductView.swift */,
 				B33479752C90FFBC00F53B47 /* ListView.swift */,
+				B33479772C91851E00F53B47 /* AsyncImageView.swift */,
+				B33479792C91871200F53B47 /* DiscountView.swift */,
+				B334797B2C9188E800F53B47 /* CategoryView.swift */,
+				B334797D2C918EEB00F53B47 /* PriceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,8 +189,12 @@
 				B33479222C8FC11B00F53B47 /* ProductView.swift in Sources */,
 				B334796C2C90C9C500F53B47 /* ResponseViewModel.swift in Sources */,
 				B33479762C90FFBC00F53B47 /* ListView.swift in Sources */,
+				B334797A2C91871200F53B47 /* DiscountView.swift in Sources */,
 				B334796A2C90C3B600F53B47 /* ResponseModel.swift in Sources */,
+				B334797E2C918EEB00F53B47 /* PriceView.swift in Sources */,
 				B33479202C8FC11B00F53B47 /* Store4UApp.swift in Sources */,
+				B334797C2C9188E800F53B47 /* CategoryView.swift in Sources */,
+				B33479782C91851E00F53B47 /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
